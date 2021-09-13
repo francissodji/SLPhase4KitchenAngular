@@ -1,0 +1,44 @@
+
+
+<h3>Food - Detail</h3><br/><br/>
+
+<div class="container col-md-8">
+
+  <form class="row g-3">
+    <div class="card">
+      <div class="card-header">
+        <strong>Detail of - {{foodtodelete.namefood}}</strong> 
+      </div>
+
+      <div class="card-body">
+        <div class="row">
+          <div class="col col-md-4">
+
+            <div class="row">
+                <tr><th>Qty Avail.: </th> <td>{{foodtodelete.qtityavailfood}}</td></tr>
+              </div>
+            <div class="row">
+              <tr><th>Unite price.: </th> <td>{{foodtodelete.pricefood}}</td></tr>
+            </div>
+          </div>
+
+        </div>
+      </div>
+  
+      <div class="card-footer text-muted">
+        <div class="row">
+          <div class="col col-md-6">
+            <a routerLink='/listallfoods' class="btn btn-secondary">Go back</a>
+          </div>
+
+          <div class="col col right col-md-6" >
+            <button type="submit" class="btn btn-danger"  name="btDelete" (click)=deletefood()>Delete Food</button>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  </form>
+
+</div>
+

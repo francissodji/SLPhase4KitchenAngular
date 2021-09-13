@@ -1,0 +1,53 @@
+
+
+
+<h3>List of Foods</h3><br/>
+
+
+<!--<h4><a [routerLink]="['/addnewfood']">Add new Food</a></h4>-->
+
+<div class="container">
+    <form class="row g-12" (submit) = "searchFoods()">
+        <div class="table-responsive">
+            <table class="table">
+                <tr>
+                    <td>
+                        <div class="text-center col-md-8">
+                            <input type="search" class="form-control form-control-dark" placeholder="Search by food name..." aria-label="Search" name="searchelement" [(ngModel)]="searchElement">
+                        </div>
+                    </td>
+                    <td>
+                        <div class="col-md-4">
+                            <button type="submit" class="btn btn-primary"  name="btSearch" (click)=searchFoods()>Search</button>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </form>
+</div> 
+
+<div class="row">
+    <div class="col">
+        <table class="table table-hover">
+
+            <thead>
+                <tr>
+                    <td>Name</td>
+                    <td>Description</td>
+                    <td>Unit Price</td>
+                </tr>
+            </thead>
+            <tbody>
+    
+                <tr *ngFor="let aFood of allFoods">
+                    <td>{{ aFood.namefood }}</td>
+                    <td>{{ aFood.descriptfood }}</td>
+                    <td>{{ aFood.pricefood }}</td>
+    
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+

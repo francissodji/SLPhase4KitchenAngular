@@ -1,0 +1,66 @@
+
+
+
+
+<body class="text-center">
+    <main class="form-signin"> 
+        <div class="center">
+            <div class="container">
+                <form class="row">
+                    <small class="danger">{{errorMessage}}</small>
+
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <h1>Please sign in</h1>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label for="uUserUname" class="form-label">Username</label>
+                                <input type="text" class="form-control" height="20px" [(ngModel)] = "userToConnect.username" name="uUserUname" required>
+                            </div><br/>
+                        </div>
+                        <br>
+            
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label for="uUserPword" class="form-label">Password</label>
+                                <input type="password" class="form-control" [(ngModel)] = "userToConnect.password" name="uUserPword" required>
+                            </div><br/>
+                        </div>
+                        <br>
+                        <br>
+
+                        <div class="row row-md-2">
+                            <table class="table">
+                                <tr>
+                                    <td>
+                                        <div class="row text-center">
+                                            <div class="col-md-2" >
+                                                <button type="submit" class="btn btn-primary"  name="btSubmit" (click)= userLogin()>Log In </button>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="row text-left">
+                                            <div class="col-md-2">
+                                                <a [routerLink]="['/changepassword']">Change Password</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        
+                        
+
+                        
+
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+    </main>
+</body>

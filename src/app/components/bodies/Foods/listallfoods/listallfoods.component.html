@@ -1,0 +1,46 @@
+
+
+<h2><strong>List of Available foods</strong></h2>
+
+
+<div class="container">
+
+    <div>
+        <a routerLink = '/addnewfood'><h3><strong>Add new food</strong></h3></a>
+    </div>
+
+    <table class="table table-hover">
+
+        <thead>
+            <tr>
+                <td>Id</td>
+                <td>Name</td>
+                <td>Description</td>
+                <td>Unit Price</td>
+                <td>Quantity</td>
+                <td>Delete</td>
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr *ngFor="let aFood of allFoods">
+                <td>{{ aFood.idfood }}</td>
+                <td>{{ aFood.namefood }}</td>
+                <td>{{ aFood.descriptfood }}</td>
+                <td>{{ aFood.pricefood }}</td>
+                <td>{{ aFood.qtityavailfood }}</td>
+                <td>
+                    <div class="text-center col-md-6">
+                        <a [routerLink] = "['/deletefood', aFood.idfood]" class="btn btn-danger">Delete</a>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="row">
+        <div class="col-md-4">
+            <a routerLink = '/adminmenu' class="btn btn-outline-light me-2"><strong>Back to Admin Menu</strong></a>
+        </div><br/>
+    </div>
+</div>
